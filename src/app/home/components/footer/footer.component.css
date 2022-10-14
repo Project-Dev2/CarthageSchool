@@ -1,0 +1,106 @@
+  .footer {
+    background-color: #f0faf5;
+  }
+  .footer .box-school,
+  .footer .box-contact {
+    background-color: #3cb371;
+    font-size: 19px;
+    border-radius: 10px 0px;
+  }
+  .footer .box-school {
+    background-color: #3cb371;
+  }
+  .footer .box-contact {
+    background-color: #da70d6;
+  }
+  .footer p {
+    color: rgb(87, 85, 85);
+    font-size: 15px;
+  }
+  .footer .copyright {
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: #3cb371;
+  }
+  .footer .school .social li {
+    margin-right: 10px;
+  }
+  .footer .school .social li a {
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  .footer .social {
+    display: flex;
+  }
+  .footer .school .social .facebook {
+    background-color: #1877f2;
+  }
+  .footer .school .social .facebook:hover {
+    background-color: #5897eb;
+  }
+  .footer .school .social .instagram {
+    background-color: #dd2a7b;
+  }
+  .footer .school .social .instagram:hover {
+    background-color: #db659a;
+  }
+  .footer .school .social .youtube {
+    background-color: #ff0000;
+  }
+  .footer .school .social .youtube:hover {
+    background-color: #eb4e4e;
+  }
+  .footer .school .social .linkedin {
+    background-color: #0a66c2;
+  }
+  .footer .school .social .linkedin:hover {
+    background-color: #367dc5;
+  }
+  .footer .school .line,
+  .footer .contact .line {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .footer .school .line .icon,
+  .footer .contact .line .icon {
+    font-size: 20px;
+    color: #3cb371;
+    margin-right: 15px;
+  }
+  .footer .school .line .info,
+  .footer .contact .line .info {
+    line-height: 1.7;
+    flex: 1;
+    font-size: 15px;
+    color: #626262;
+  }
+  .footer .school .line .info span,
+  .footer .contact .line .info span {
+    display: block;
+  }
+  @media (max-width: 767px) {
+    .footer {
+      text-align: center;
+    }
+    .footer .school .social {
+      justify-content: center;
+      align-items: center;
+    }
+    .footer .school .line .icon,
+    .footer .contact .line .icon {
+      display: none;
+    }
+    .footer .school {
+      margin-bottom: 20px;
+    }
+  }

@@ -1,0 +1,79 @@
+<app-topbar></app-topbar>
+<section class="vh-100">
+    <img src="assets/imgs/register.jpg" id="fondecran" class="fondecran" alt="">
+    <div class="overlay"></div>
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border: none;">
+            <div class="card-body p-5 text-center">
+              <div class="title">
+                <h3>CarthageSchool</h3>
+                <p>Pré-Inscription</p>
+              </div>
+              <form [formGroup]="signupForm">
+                <p class="student">Elève - Informations Générales</p>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Nom et Prénom *</mat-label>
+                    <input matInput type="text" formControlName="usernameStudent">
+                  </mat-form-field>
+                </div>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Adresse *</mat-label>
+                    <input matInput type="text" formControlName="adress">
+                  </mat-form-field>
+                </div>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Date de naissance *</mat-label>
+                    <input matInput type="date" formControlName="birthday">
+                  </mat-form-field>
+                </div>
+                <mat-form-field appearance="outline">
+                  <mat-label>Classe demandée *</mat-label>
+                  <mat-select formControlName="class">
+                    <mat-option value="Maternelle">Maternelle</mat-option>
+                    <mat-option value="Préparatoire">Préparatoire</mat-option>
+                    <mat-option value="Première Année">Première Année</mat-option>
+                    <mat-option value="Deuxième Année">Deuxième Année</mat-option>
+                    <mat-option value="Troisième Année">Troisième Année</mat-option>
+                    <mat-option value="Quatrième Année">Quatrième Année</mat-option>
+                    <mat-option value="Cinquième Année">Cinquième Année</mat-option>
+                    <mat-option value="Sixième Année">Sixième Année</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <br>
+                
+                <p class="student">Parent - Informations Générales</p>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Nom et Prénom *</mat-label>
+                    <input matInput type="text" formControlName="usernameParent">
+                  </mat-form-field>
+                </div>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Téléphone *</mat-label>
+                    <input matInput type="tel" formControlName="phone">
+                  </mat-form-field>
+                </div>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Email *</mat-label>
+                    <input matInput type="email" formControlName="email">
+                  </mat-form-field>
+                </div>
+                <button class="btn btn-success btn-lg btn-block"
+                        [disabled]="signupForm.invalid" 
+                        (click)="submit()">Inscription
+                </button>
+                <div routerLink="/login" class="login mt-4">Avez-vous déja un compte? Cliquer ici</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,81 @@
+{
+  "students": [
+    {
+      "username": "cs3-00000001",
+      "email": "alma.may@gmail.com",
+      "password": "123",
+      "id": 1
+    }
+  ],
+  "admin": [
+    {
+      "username": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "id": 1
+    }
+  ],
+  "signup": [
+    {
+      "usernameStudent": "Alma",
+      "usernameParent": "Olfa Ben Youssef",
+      "adress": "May",
+      "birthday": "2012-03-02",
+      "class": "Troisième Année",
+      "phone": "25698521",
+      "email": "alma@gmail.com",
+      "id": 1
+    },
+    {
+      "usernameStudent": "Badis Hammou",
+      "usernameParent": "Mahdi Hammou",
+      "adress": "Bizerte",
+      "birthday": "2015-03-25",
+      "class": "Deuxième Année",
+      "phone": "92654120",
+      "email": "badis@gmail.com",
+      "id": 2
+    }
+  ],
+  "subjects": [
+    {
+      "name": "Français 4ème",
+      "questions": [
+        {
+          "question": "5*6",
+          "answer1": "30",
+          "answer2": "25",
+          "answer3": "15",
+          "answer4": "19",
+          "correctAnswer": "30"
+        }
+      ],
+      "id": 1
+    }
+  ],
+  "news": [
+    {
+      "name": "Invitation à la réunion des parents d’élèves",
+      "avis": [
+        {
+          "news": "Chers parents d’élèves,\n\nVous êtes invités à participer à la réunion d’informations destinée aux parents d’élèves (VEUILLEZ VERIFIER VOS BOITES MAIL POUR PLUS DE DETAILS).\n\nNous aurons à cette occasion la possibilité d’élire les délégués des parents,  de mieux comprendre le système d’évaluation de notre école, ainsi que des échanges avec les enseignants par groupe de matières.\n\nEn espérant que nous pourrons compter sur votre participation et votre implication, nous vous prions d’agréer, chers parents, nos salutations distinguées."
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Avis pour passer le test de français de 4ème année",
+      "avis": [
+        {
+          "news": "Il est porté à la connaissance des élèves de 4ème année qu'ils doivent passer le test de français.\nVous trouverez le test dans la rubrique \"Test\".\nNB : Le test sera supprimé après 48h et les élèves qu'ils n'ont pas passer leurs test vont avoir automatiquement un zéro dans l'épreuve."
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "login": [
+    {
+      "id": 1
+    }
+  ]
+}

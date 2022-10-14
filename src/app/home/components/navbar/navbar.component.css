@@ -1,0 +1,91 @@
+  .navbar {
+    background: #3cb371;
+  }
+  .navbar .nav-link{
+    text-decoration: none;
+  } 
+  .navbar .bi-envelope-fill,
+  .navbar .bi-phone-fill {
+    color: #c7cf00;
+  }
+  .navbar .navbar-text {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .header {
+    box-shadow: 0 0 8px #ddd;
+  }
+  .navbar .navbar-brand {
+    color: #c7cf00;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Brush Script MT";
+  }
+  .navbar .navbar-nav {
+    color: #626262;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .navbar .navbar-nav a:hover,
+  .navbar .navbar-nav a:focus {
+    color: #c7cf00;
+  }
+  .nav-bullets {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    z-index: 1000;
+  }
+  /*@media (max-width: 991px) {
+    .nav-bullets {
+      display: none;
+    }
+  }*/
+  .nav-bullets .bullet {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #3cb371;
+    margin: 20px auto;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+  }
+  .nav-bullets .bullet .tooltips {
+    background-color: #3cb371;
+    width: 120px;
+    color: #fff;
+    padding: 8px 10px;
+    position: absolute;
+    right: 32px;
+    top: -10px;
+    text-align: center;
+    cursor: default;
+    pointer-events: none;
+    display: none;
+  }
+  .nav-bullets .bullet:hover .tooltips {
+    display: block;
+  }
+  .nav-bullets .bullet .tooltips:before {
+    content: "";
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent #3cb371;
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .username {
+    background-color: #3cb371;
+    color: #fff;
+    border-radius: 14%;
+    font-size: 17px;
+  }

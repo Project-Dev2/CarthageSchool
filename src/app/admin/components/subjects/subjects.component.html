@@ -1,0 +1,16 @@
+<div class="container subjects">
+    <div class="subjectBox">
+        <div class="row">
+            <div class="col-md-3 col-sm-12" *ngFor="let item of subjects;let index=index" routerLink="/test/{{item.id}}">
+                <div class="namesubject">
+                    <div>{{item.name}}</div>
+                </div>
+                <div class="subBtn">
+                    <button mat-raised-button *ngIf="user?.role == 'admin'" color="primary" class="btnShow mb-2">Afficher</button>
+                    <button mat-raised-button *ngIf="user?.role == 'admin'" color="warn" (click)="delete(index)" class="btnDelete mx-1">Supprimer</button>
+                    <button mat-raised-button *ngIf="user?.role == 'students'" class="btnStart">Commencer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

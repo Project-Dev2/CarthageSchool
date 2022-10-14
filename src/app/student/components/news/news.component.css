@@ -1,0 +1,51 @@
+.newsBox {
+    width: 90%;
+    margin: 50px auto;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 150px;
+}
+    .newshead {
+        margin-top: -40px;
+
+        margin-bottom: 20px;
+    }
+        h2 {
+            font-family: 'Almarai', sans-serif;
+            display: inline-block;
+            padding: 5px 88px;
+            background-color: #3cb371;
+            border-radius: 30px;
+            font-size: 28px;
+            color: #FFf;
+        }
+    
+        .btnDelete {
+            display: block;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+     
+       .quizBox .row {
+           padding-right: 30px;}
+           .quizBox .row  .col-sm-12 {
+            margin: 7px 0px;
+            font-size: 20px;
+         
+       }
+        .quizBox strong {
+            font-size: 22px;
+        }
+
+        .text {
+            line-height: 2;
+            font-weight: 400;
+        }
+
+        .btnDelete:hover {
+            background-color: rgb(219, 88, 88);
+            color: #fff;
+        }

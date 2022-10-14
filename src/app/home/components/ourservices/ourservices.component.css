@@ -1,0 +1,69 @@
+  /* ----- # Start Title # ----- */
+  .main-heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    position: relative;
+    margin-bottom: 70px;
+  }
+  .main-heading::before {
+    content: "";
+    position: absolute;
+    background-color: #da70d6;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    width: 90px;
+    height: 3px;
+    background-image: linear-gradient(
+      to right,
+      #f4a460 30%,
+      #3cb371 30%,
+      #3cb371 65%,
+      #c7cf00 60%
+    );
+  }
+  /* ----- # End Title # ----- */
+
+  .services {
+    background-image: url(../../../../assets/imgs/copy-book.jpg);
+  }
+  .services .container .box-cantine,
+  .services .container .box-infirmerie,
+  .services .container .box-clubs,
+  .services .container .box-bus {
+    border-radius: 12px 0px;
+    background-color: #fff;
+  }
+  .services .container .box-cantine {
+    border: 2px solid #3cb371;
+    color: #3cb371;
+  }
+  .services .container .box-cantine:hover {
+    background-color: #3cb371;
+    color: white;
+  }
+  .services .container .box-infirmerie {
+    border: 2px solid #f4a460;
+    color: #f4a460;
+  }
+  .services .container .box-infirmerie:hover {
+    background-color: #f4a460;
+    color: white;
+  }
+  .services .container .box-clubs {
+    border: 2px solid #c7cf00;
+    color: #c7cf00;
+  }
+  .services .container .box-clubs:hover {
+    background-color: #c7cf00;
+    color: white;
+  }
+  .services .container .box-bus {
+    border: 2px solid #da70d6;
+    color: #da70d6;
+  }
+  .services .container .box-bus:hover {
+    background-color: #da70d6;
+    color: white;
+  }

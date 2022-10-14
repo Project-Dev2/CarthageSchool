@@ -1,0 +1,90 @@
+<div class="topBar fixed-top">
+  <nav *ngIf="url == '/'" class="navbar p-0">
+    <div class="container">
+      <span class="navbar-text text-light">
+        <i class="bi bi-phone-fill"></i>
+        (+216) 50 000 000
+      </span>
+      <span class="navbar-text text-light">
+        <i class="bi bi-envelope-fill"></i>
+        carthageschool@gmail.com
+      </span>
+    </div>
+  </nav>
+  <nav *ngIf="url !== '/login' && url !== '/signup'" class="navbar header navbar-expand-md bg-white p-2">
+    <div class="container">
+      <div class="navbar-brand">Carthage School</div>
+      <!-- button for small mobile -->
+      <button
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainmenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="mainmenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">          
+          <li class="nav-item">
+            <a class="nav-link active" *ngIf="user == null"  routerLink="" (click)="toHome()">
+              Acceuil
+            </a>
+          </li>
+          <li class="nav-item">
+            <div *ngIf="user !== null" class="nav-link username">
+              {{user?.username}}
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" *ngIf="user !== null"  routerLink="/space">
+              Acceuil
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="user == null" routerLink="signup">
+              Pré-Inscription
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="user == null" routerLink="login">
+              Connexion
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+               *ngIf="user !== null"
+               (click)="logout()" 
+               routerLink="login"
+               >
+               Déconnexion
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div *ngIf="url == '/'" class="nav-bullets">
+  <div class="bullet" (click)="toHome()">
+    <div class="tooltips">Acceuil</div>
+  </div>
+  <div class="bullet" (click)="toSchool()">
+    <div class="tooltips">L'école</div>
+  </div>
+  <div class="bullet" (click)="toServices()">
+    <div class="tooltips">Services</div>
+  </div>
+  <div class="bullet" (click)="toGallery()">
+    <div class="tooltips">Gallerie</div>
+  </div>
+  <div class="bullet" (click)="toProgram()">
+    <div class="tooltips">Parcours Scolaire</div>
+  </div>
+  <div class="bullet" (click)="toActivity()">
+    <div class="tooltips">Activités</div>
+  </div>
+  <div class="bullet" (click)="toContact()">
+    <div class="tooltips">Contact</div>
+  </div>
+</div>

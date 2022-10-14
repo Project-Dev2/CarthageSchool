@@ -1,0 +1,94 @@
+  /* ----- # Start Title # ----- */
+  .main-heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    position: relative;
+    margin-bottom: 70px;
+  }
+  .main-heading::before {
+    content: "";
+    position: absolute;
+    background-color: #da70d6;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    width: 90px;
+    height: 3px;
+    background-image: linear-gradient(
+      to right,
+      #f4a460 30%,
+      #3cb371 30%,
+      #3cb371 65%,
+      #c7cf00 60%
+    );
+  }
+  /* ----- # End Title # ----- */
+
+  .contact .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (max-width: 767px) {
+    .contact .content {
+      flex-direction: column;
+    }
+    .contact .content form {
+      margin-top: 30px;
+    }
+  }
+  .contact .content form {
+    flex-basis: 70%;
+  }
+  .contact .content form .main-input {
+    padding: 15px;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid rgb(167, 163, 163);
+    border-radius: 5px;
+  }
+  .contact .content form .main-input:focus {
+    outline: none;
+    border-color: #3cb371;
+  }
+  .contact .content form textarea.main-input {
+    height: 150px;
+  }
+  .contact .content form input[type="submit"] {
+    background-color: #3cb371;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  .contact .content form input[type="submit"]:hover {
+    background-color: white;
+    color: #3cb371;
+    border: 1px solid #3cb371;
+  }
+  .contact .content .info {
+    flex-basis: 25%;
+  }
+  @media (max-width: 767px) {
+    .contact .content .info {
+      text-align: center;
+      order: -1;
+    }
+  }
+  .contact .content .info h4 {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  .contact .content .info .phone {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .contact .content .info p,
+  .contact .content .info span {
+    font-size: 15px;
+    color: #626262;
+  }

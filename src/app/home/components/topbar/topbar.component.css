@@ -1,0 +1,13 @@
+.topBar {
+  margin-top: 20px;
+}
+.bi-house-fill {
+  background-color: #b86a46;
+  font-size: 17px;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px;
+}
+.bi-house-fill:hover {
+  background-color: #db8157;
+}

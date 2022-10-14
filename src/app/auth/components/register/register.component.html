@@ -1,0 +1,51 @@
+<section class="register">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border: none;">
+            <div class="card-body p-5 text-center">
+              <div class="title">
+                <h3>CarthageSchool</h3>
+                <p>Inscription Elève</p>
+              </div>
+              <form [formGroup]="userForm">
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Nom et Prénom *</mat-label>
+                    <input matInput type="text" formControlName="nameStudent">
+                  </mat-form-field>
+                </div>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Matricule *</mat-label>
+                    <input matInput type="text" formControlName="username">
+                  </mat-form-field>
+                </div>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Email *</mat-label>
+                    <input matInput type="email" formControlName="email">
+                  </mat-form-field>
+                </div>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Mot de passe *</mat-label>
+                    <input matInput type="password" formControlName="password">
+                  </mat-form-field>
+                </div>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Confirmer mot de passe *</mat-label>
+                    <input matInput type="password" formControlName="confirmPassword">
+                  </mat-form-field>
+                </div>
+                <button class="btn btn-success btn-lg btn-block" 
+                        [disabled]="userForm.invalid || (userForm.value.password !== userForm.value.confirmPassword)" 
+                        (click)="submit()">Inscription</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

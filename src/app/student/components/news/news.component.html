@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="newsBox">
+        <div class="newshead text-center"><h2>Avis : {{news?.name}}</h2></div>
+        <div class="quizBox" *ngFor="let item of news?.avis;let index = index">
+            <strong>
+                <span class="text-danger">Avis {{index + 1}} : </span>
+                <p class="text mt-4">{{item.news}}</p>
+            </strong>
+            <br>
+            <div class="text-start" *ngIf="user?.role !== 'students'">
+               <button mat-raised-button  color="warn" class="btnDelete" (click)="delete(index)">Supprimer</button>
+            </div>
+            <hr>
+        </div>   
+    </div>
+</div>

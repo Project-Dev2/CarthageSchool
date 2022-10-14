@@ -1,0 +1,41 @@
+<app-topbar></app-topbar>
+<section class="vh-100">
+    <img src="assets/imgs/register.jpg" id="fondecran" class="fondecran" alt="">
+    <div class="overlay"></div>
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border: none;">
+            <div class="card-body p-5 text-center">
+              <div class="title">
+                <h3>CarthageSchool</h3>
+                <p>Connexion</p>
+              </div>
+              <form [formGroup]="loginForm">
+                <div class="form-outline">
+                  <mat-radio-group (change)="getRole($event)" formControlName="type"> 
+                    <mat-radio-button value="students" class="w-25 mb-3" color="primary">Elève</mat-radio-button>
+                    <mat-radio-button value="admin" class="w-25 mb-3" color="primary">Enseignant</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email">
+                  </mat-form-field>
+                </div>
+                <div class="form-outline">
+                  <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Mot de passe</mat-label>
+                    <input matInput type="password" formControlName="password">
+                  </mat-form-field>
+                </div>
+                <button class="btn btn-success btn-lg btn-block" (click)="submit()">Connexion</button>
+                <div routerLink="/signup" class="login mt-4">Pas de compte? Remplir le formulaire de pré-inscription</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

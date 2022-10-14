@@ -1,0 +1,18 @@
+.students {
+    padding: 50px 0;
+    margin-top: 100px;
+}
+
+table {
+    width: 100%;
+}
+         
+thead tr {
+    background-color: #7a36f4;
+}
+
+thead th {
+    color: #FFF;
+    font-size: 22px;
+}
+            

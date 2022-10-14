@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="new-news">
+        <mat-horizontal-stepper linear #stepper [selectedIndex]="stepperIndex">
+            <mat-step label="Objet De l'Avis" [completed]="startAdd">
+                <div class="uk-position-large uk-position-center uk-overlay uk-overlay-default">
+                    <div class="AddSubject">    
+                        <mat-form-field appearance="outline" color="primary" class="queiz">
+                            <mat-label>Objet De l'Avis</mat-label>
+                            <input matInput type="text" [formControl]="name">
+                        </mat-form-field>
+                    </div>
+                    <button class="btnStart" mat-raised-button matStepperNext (click)="start()">Suivant</button>
+                </div>
+            </mat-step>
+
+            <mat-step label="Avis : {{subjectName}}" [completed]="preview">
+                <div class="news">
+                    <form [formGroup]="newsForm">
+                        <mat-form-field class="example-full-width" appearance="outline" color="primary" class="queiz">
+                            <mat-label>Avis</mat-label>
+                            <textarea matInput placeholder="Avis" rows="15" formControlName="news"></textarea>
+                        </mat-form-field>
+    
+                        <div class="newsBtn">
+                            <div>
+                                <button mat-raised-button class="btnShow" matStepperNext (click)="submit()" disabled="{{avis.length ? false : true }}"> {{preview ? 'Afficher' : 'Terminer'}}</button>
+                                <button mat-raised-button color="warn" matStepperPrevious (click)="cancel()">Annuler</button>
+                            </div>
+                            <div>
+                                <button mat-raised-button color="primary" [disabled]="newsForm.invalid" (click)="createNews()" >Enregistrer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </mat-step>
+
+            <mat-step label="Afficher Avis" completed="false">
+                <div class="newsBox">
+                    <div class="newshead text-center"><h2>Avis : {{subjectName}}</h2></div>
+                    <div class="quizBox" *ngFor="let item of avis; let index = index">
+                        <strong><span class="text"></span>{{item.news}}</strong>
+                        <div class="text-right mt-3">
+                            <button mat-raised-button color="warn" (click)="delete(index)">Supprimer</button>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+.workspace {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 5%;
+  background-color: #f8f8f8;
+  min-height: 100%;
+}
+.workspace .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 40px;
+}
+.workspace  .news,
+.workspace  .newnews,
+.workspace  .subjects,
+.workspace  .newtest,
+.workspace  .students,
+.workspace  .newstudents,
+.workspace  .register,
+.workspace  .account{
+  position: relative;
+  background-color: white;
+  text-align: center;
+  border-radius: 9px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  transition: 0.3s;
+}
+.workspace .news:hover,
+.workspace .newnews:hover,
+.workspace .subjects:hover,
+.workspace .newtest:hover,
+.workspace .students:hover,
+.workspace .newstudents:hover,
+.workspace .register:hover,
+.workspace .account:hover {
+  transform: translateY(-10px);
+}
+.workspace a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.workspace .card a {
+  line-height: 2;
+  color: #4169e1;
+}
+.workspace .news p {
+  color: #ff69b4;
+}
+.workspace .newnews p {
+  color: #9acd32;
+}
+.workspace .subjects p {
+  color: #f4a460;
+}
+.workspace .newtest p {
+  color: #4169e1;
+}
+.workspace .students p {
+    color: #3cb371;
+}
+.workspace .newstudents p {
+    color: #c7cf00;
+}
+.workspace .register p {
+    color: #da70d6;
+}
+.workspace .account p {
+  color: rgb(231, 101, 101);
+}
+.workspace .news .avatar,
+.workspace .newnews .avatar,
+.workspace .subjects .avatar,
+.workspace .newtest .avatar,
+.workspace .students .avatar,
+.workspace .newstudents .avatar,
+.workspace .register .avatar,
+.workspace .account .avatar {
+  position: absolute;
+  margin: 0 auto;
+  left: 45px;
+  top: -25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  padding: 15px;
+}
+.workspace .news .avatar {
+  background-color: #ff69b4;
+}
+.workspace .newnews .avatar {
+  background-color: #9acd32;
+}
+.workspace .subjects .avatar {
+  background-color: #f4a460;
+}
+.workspace .newtest .avatar {
+  background-color: #4169e1;
+}
+.workspace .students .avatar {
+    background-color: #3cb371;
+}
+.workspace .newstudents .avatar {
+    background-color: #c7cf00;
+}
+.workspace .register .avatar {
+    background-color: #da70d6;
+}
+.workspace .account .avatar {
+  background-color: rgb(231, 101, 101);
+}
+.workspace .news .avatar i,
+.workspace .newnews .avatar i,
+.workspace .subjects .avatar i,
+.workspace .newtest .avatar i,
+.workspace .students .avatar i,
+.workspace .newstudents .avatar i,
+.workspace .register .avatar i,
+.workspace .account .avatar i {
+  color: white;
+  font-size: 28px;
+  margin-top: 5%;
+}

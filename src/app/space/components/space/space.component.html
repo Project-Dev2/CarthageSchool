@@ -1,0 +1,74 @@
+<div class="workspace">
+  <div class="container">
+    <div class="content">
+      <a routerLink="/news" class="news">
+        <div class="avatar">
+          <i class="bi bi-chat-right-text"></i>
+        </div>
+        <p>Avis</p>
+      </a>
+      <a *ngIf="user?.role == 'admin'" routerLink="/newnews" class="newnews">
+        <div class="avatar">
+          <i class="bi bi-card-checklist"></i>
+        </div>
+        <p>Nouvel avis</p>
+      </a>
+      <a *ngIf="user?.role == 'admin'" routerLink="/newstudents" class="newstudents">
+        <div class="avatar">
+          <i class="bi bi-card-list"></i>
+        </div>
+        <p>liste pré-inscription</p>
+      </a>
+      <a *ngIf="user?.role == 'admin'" routerLink="/register" class="register">
+        <div class="avatar">
+          <i class="bi bi-person-plus"></i>
+        </div>
+        <p>Inscription élève</p>
+      </a>
+      <a routerLink="/subjects" class="subjects">
+        <div class="avatar">
+          <i class="bi bi-list-ol"></i>
+        </div>
+        <p>Tests</p>
+      </a>
+      <a *ngIf="user?.role == 'admin'" routerLink="/newtest" class="newtest">
+        <div class="avatar">
+          <i class="bi bi-clipboard-check"></i>
+        </div>
+        <p>Nouveau test</p>
+      </a>
+      <a *ngIf="user?.role == 'admin'" routerLink="/students" class="students">
+        <div class="avatar">
+          <i class="bi bi-bookmark"></i>
+        </div>
+        <p>Résultats tests</p>
+      </a>
+      <a *ngIf="user?.role == 'admin'" routerLink="/access" class="account">
+        <div class="avatar">
+          <i class="bi bi-door-open"></i>
+        </div>
+        <p>Accés compte</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="workspace vh-100 " *ngIf="user?.role == 'admin'">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card" style="border: none;">
+            <div class="avatar">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <a routerLink="/news">Bienvenue dans Votre Espace<hr> >> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+-->
+
+
+

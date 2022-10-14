@@ -1,0 +1,58 @@
+  .carousel-inner > .carousel-item > img {
+    height: 95vh;
+  }
+  .slider .carousel-inner .overlay {
+    position: absolute;
+    background-color: rgb(0 0 0 / 0.2);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .slider .carousel-inner .text {
+    position: absolute;
+    left: 0;
+    top: 55%;
+    width: 50%;
+    background-color: rgb(255 255 255 / 70%);
+    transform: translateY(-50%);
+    padding: 40px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+  }
+  @media (max-width: 767px) {
+    .slider .carousel-inner .text {
+      width: 100%;
+      text-align: center;
+    }
+    .slider .carousel-inner .text .content {
+      width: 100%;
+    }
+  }
+  .slider .carousel-inner .text {
+    display: block;
+  }
+  .slider .carousel-inner .text .content {
+    margin-bottom: 30px;
+  }
+  .slider .carousel-inner .text .content h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .slider .carousel-inner .text .content p {
+    color: #626262;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .slider .carousel-inner .text .content ul{
+    font-weight: 900;
+    margin-right: 10px;
+    color: #3cb371;
+  }
+  .slider .carousel-inner .text > a {
+    text-decoration: none;
+  }

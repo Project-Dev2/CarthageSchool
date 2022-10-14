@@ -1,0 +1,18 @@
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #c7cf00;
+    color: #fff;
+    border-radius: 50%;
+    display: none;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+  }
+  #btn-back-to-top:hover {
+    background-color: #aeb324;
+  }
+  .bi-triangle-fill {
+    font-size: 17px;
+  }

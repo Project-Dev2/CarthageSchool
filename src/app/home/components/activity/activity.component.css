@@ -1,0 +1,109 @@
+  /* ----- # Start Title # ----- */
+  .main-heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    position: relative;
+    margin-bottom: 70px;
+  }
+  .main-heading::before {
+    content: "";
+    position: absolute;
+    background-color: #da70d6;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    width: 90px;
+    height: 3px;
+    background-image: linear-gradient(
+      to right,
+      #f4a460 30%,
+      #3cb371 30%,
+      #3cb371 65%,
+      #c7cf00 60%
+    );
+  }
+  /* ----- # End Title # ----- */
+
+  .activity {
+    background-image: url(../../../../assets/imgs/copy-book.jpg);
+  }
+  .activity .container .card {
+    text-align: center;
+    transition: 0.3s;
+  }
+  .activity .container .box-informatique {
+    background-color: #f4a460;
+  }
+  .activity .container .box-lecture {
+    background-color: #3cb371;
+  }
+  .activity .container .box-musique {
+    background-color: #da70d6;
+  }
+  .activity .container .box-theatre {
+    background-color: #c7cf00;
+  }
+  .activity .container .box-danse {
+    background-color: #da70d6;
+  }
+  .activity .container .box-robotique {
+    background-color: #c7cf00;
+  }
+  .activity .container .box-calcul {
+    background-color: #f4a460;
+  }
+  .activity .container .box-anglais {
+    background-color: #3cb371;
+  }
+  .activity .container .box-theatre:hover,
+  .activity .container .box-robotique:hover {
+    background-color: #9ba007;
+  }
+  .activity .container .box-anglais:hover,
+  .activity .container .box-lecture:hover {
+    background-color: #0e974c;
+  }
+  .activity .container .box-calcul:hover,
+  .activity .container .box-informatique:hover {
+    background-color: #e97e21;
+  }
+  .activity .container .box-musique:hover,
+  .activity .container .box-danse:hover {
+    background-color: #ad42aa;
+  }
+  .activity .container .box-informatique:hover,
+  .activity .container .box-lecture:hover,
+  .activity .container .box-musique:hover,
+  .activity .container .box-theatre:hover,
+  .activity .container .box-robotique:hover,
+  .activity .container .box-danse:hover,
+  .activity .container .box-calcul:hover,
+  .activity .container .box-anglais:hover {
+    transform: translateY(-10px);
+  }
+  .activity .container .box-informatique p,
+  .activity .container .box-lecture p,
+  .activity .container .box-musique p,
+  .activity .container .box-theatre p,
+  .activity .container .box-robotique p,
+  .activity .container .box-danse p,
+  .activity .container .box-calcul p,
+  .activity .container .box-anglais p {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+  .activity .container .card .fa-laptop-code,
+  .activity .container .card .fa-book,
+  .activity .container .card .fa-guitar,
+  .activity .container .card .fa-mask,
+  .activity .container .card .fa-child,
+  .activity .container .card .fa-robot,
+  .activity .container .card .fa-divide,
+  .activity .container .card .fa-globe {
+    font-size: 40px;
+    color: white;
+  }

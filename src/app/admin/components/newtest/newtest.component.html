@@ -1,0 +1,129 @@
+<div class="container">
+    <div class="new-exam">
+        <mat-horizontal-stepper linear #stepper [selectedIndex]="stepperIndex">
+            <mat-step label="Nom De Matière" [completed]="startAdd">
+                <div class="uk-position-large uk-position-center uk-overlay uk-overlay-default">
+                    <div class="AddSubject">
+                        <mat-form-field appearance="outline" color="warn">
+                            <mat-label>Nom De Matière</mat-label>
+                            <mat-select [formControl]="name">
+                              <mat-option value="Français 6ème">Français 6ème</mat-option>
+                              <mat-option value="Français 5ème">Français 5ème</mat-option>
+                              <mat-option value="Français 4ème">Français 4ème</mat-option>
+                              <mat-option value="Français 3ème">Français 3ème</mat-option>
+                              <mat-option value="Français 2ème">Français 2ème</mat-option>
+                              <mat-option value="Français 1ére">Français 1ére</mat-option>
+
+                              <mat-option value="Anglais 6ème">Anglais 6ème</mat-option>
+                              <mat-option value="Anglais 5ème">Anglais 5ème</mat-option>
+                              <mat-option value="Anglais 4ème">Anglais 4ème</mat-option>
+                              <mat-option value="Anglais 3ème">Anglais 3ème</mat-option>
+                              <mat-option value="Anglais 2ème">Anglais 2ème</mat-option>
+                              <mat-option value="Anglais 1ére">Anglais 1ére</mat-option>
+                              <mat-option value="Maths 6ème">Maths 6ème</mat-option>
+                              <mat-option value="Maths 5ème">Maths 5ème</mat-option>
+                              <mat-option value="Maths 4ème">Maths 4ème</mat-option>
+                              <mat-option value="Maths 3ème">Maths 3ème</mat-option>
+                              <mat-option value="Maths 2ème">Maths 2ème</mat-option>
+                              <mat-option value="Maths 1ére">Maths 1ére</mat-option>
+                              <mat-option value="عربية سنة 6">عربية سنة 6</mat-option>
+                              <mat-option value="عربية سنة 5">عربية سنة 5</mat-option>
+                              <mat-option value="عربية سنة 4">عربية سنة 4</mat-option>
+                              <mat-option value="عربية سنة 3">عربية سنة 3</mat-option>
+                              <mat-option value="عربية سنة 2">عربية سنة 2</mat-option>
+                              <mat-option value="عربية سنة 1">عربية سنة 1</mat-option>
+                            </mat-select>
+                        </mat-form-field> 
+                    </div>
+                    <button class="btnStart" mat-raised-button matStepperNext (click)="start()">Suivant</button>
+                </div>
+            </mat-step>
+
+            <mat-step label="Questions {{subjectName}}" [completed]="preview">
+                <div class="question">
+                    <form [formGroup]="questionForm">
+                        <mat-form-field appearance="outline" color="warn" class="queiz">
+                            <mat-label>Question</mat-label>
+                            <input matInput type="text" formControlName="question">
+                        </mat-form-field>
+    
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <mat-radio-button value="answer1" (change)="getCorrect($event)"  color="warn"></mat-radio-button>
+                                <mat-form-field color="warn">
+                                    <mat-label>Réponse A</mat-label>
+                                    <input matInput type="text"  formControlName="answer1" >
+                                </mat-form-field>
+                            </div>
+    
+                            <div class="col-md-6 col-sm-12">
+                                <mat-radio-button value="answer2" (change)="getCorrect($event)"  color="warn"></mat-radio-button>
+                                <mat-form-field color="warn">
+                                    <mat-label>Réponse B</mat-label>
+                                    <input matInput type="text" formControlName="answer2" >
+                                </mat-form-field>
+                            
+                            </div>
+    
+                            <div class="col-md-6 col-sm-12">
+                                <mat-radio-button value="answer3" (change)="getCorrect($event)" color="warn"></mat-radio-button>
+                                <mat-form-field color="warn">
+                                    <mat-label>Réponse C</mat-label>
+                                    <input matInput type="text"  formControlName="answer3"  >
+                                </mat-form-field>
+                            </div>
+    
+                            <div class="col-md-6 col-sm-12">
+                                <mat-radio-button value="answer4" (change)="getCorrect($event)" color="warn"></mat-radio-button>
+                                <mat-form-field color="warn">
+                                    <mat-label>Réponse D</mat-label>
+                                    <input matInput type="text"  formControlName="answer4" >
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="questBtn">
+                            <div>
+                                <button mat-raised-button class="btnShow" matStepperNext (click)="submit()" disabled="{{questions.length ? false : true }}" > {{preview ? 'Afficher' : 'Terminer'}}</button>
+                                <button mat-raised-button color="warn" matStepperPrevious (click)="cancel()" >Annuler</button>
+                            </div>
+                            <div>
+                                <button mat-raised-button class="btnDelete" (click)="clearForm()">Supprimer</button>
+                                <button mat-raised-button color="primary" [disabled]="questionForm.invalid" (click)="createQuestion()" >Enregistrer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </mat-step>
+
+            <mat-step label="Afficher Test" completed="false">
+                <div class="examBox">
+                    <div class="examhead text-center"><h2>{{subjectName}}</h2></div>
+                    <div class="quizBox" *ngFor="let item of questions; let index = index">
+                        <strong><span class="text-danger">Question 1 : </span>{{item.question}}</strong>
+                        <div class="row" dir="ltl">
+                            <div class="col-sm-12">
+                                A) {{item.answer1}}
+                            </div>
+                            <div class="col-sm-12">
+                                B) {{item.answer2}} 
+                            </div>
+                            <div class="col-sm-12">
+                                C) {{item.answer3}}
+                            </div>
+                            <div class="col-sm-12">
+                                D) {{item.answer4}}
+                            </div>
+                            <div class="col-sm-12">
+                                <span class="text-success">Réponse ==> {{item.correctAnswer}}</span>
+                            </div>
+                        </div>
+                        <div class="text-right mt-3">
+                            <button mat-raised-button color="warn" (click)="delete(index)">Supprimer</button>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+    </div>
+</div>
